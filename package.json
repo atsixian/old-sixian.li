@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^1.1.4",
+    "@types/theme-ui": "^0.2.6",
+    "@types/theme-ui__components": "^0.2.0",
     "gatsby": "^2.13.3",
     "gatsby-plugin-google-analytics": "^2.1.4",
     "gatsby-plugin-manifest": "^2.2.3",
@@ -24,7 +26,8 @@
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-sitemap": "^2.2.19",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "typeface-spectral": "^0.0.72"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",

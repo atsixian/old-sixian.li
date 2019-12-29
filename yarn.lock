@@ -1731,6 +1731,41 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/styled-system@*":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.4.tgz#c273b1ebb9b26cb1bd9282c994fc56c82d0fbfaf"
+  integrity sha512-iBtFFmlxBbiTMpoKvRupwg75PeVbf7BBsgTlpcVBBbZyUKrhuU/4jtJQUn/wsSndKfxW0U9T17Geq0GGFWkCZw==
+  dependencies:
+    csstype "^2.6.4"
+
+"@types/styled-system__css@*":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@types/styled-system__css/-/styled-system__css-5.0.4.tgz#df83b015cf377ab39ecf33ea31339c05eeb9230a"
+  integrity sha512-SHHoNh9cCRTG9hcmCD2ua0NeYUrLmLXoMJ7g0U/e0FjrzcwNQtM5wjjEJVCVZymU632xA1PdPEykrtoSHTIecA==
+  dependencies:
+    csstype "^2.6.6"
+
+"@types/theme-ui@*", "@types/theme-ui@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@types/theme-ui/-/theme-ui-0.2.6.tgz#d8e14f6a05ceab0c23c822cf5893a51377f2091c"
+  integrity sha512-QnyTHTIJxCIVOs2g7IAdE20CpwNoaiCXFSJidy09RDq4MUjCH+kjvLbmMigUnq/E9UnjETAoUarqMJe0LAtzlg==
+  dependencies:
+    "@types/react" "*"
+    "@types/styled-system" "*"
+    "@types/styled-system__css" "*"
+    csstype "^2.6.6"
+
+"@types/theme-ui__components@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@types/theme-ui__components/-/theme-ui__components-0.2.0.tgz#2f34057e027fbf6fb9c17201f2a8df2625422676"
+  integrity sha512-h7OiONucL3aC/aediFgCNdafMix4KHe8KYn77PjhsgaRr9CeRFsiRP6J8sOHc4qNPy/eZrIP+yYFEdsqywKlTQ==
+  dependencies:
+    "@emotion/core" "^10.0.0"
+    "@emotion/styled" "^10.0.0"
+    "@types/react" "*"
+    "@types/styled-system" "*"
+    "@types/theme-ui" "*"
+
 "@types/tmp@^0.0.32":
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.32.tgz#0d3cb31022f8427ea58c008af32b80da126ca4e3"
@@ -4158,6 +4193,11 @@ csstype@^2.2.0, csstype@^2.5.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.7.tgz#20b0024c20b6718f4eda3853a1f5a1cce7f5e4a5"
   integrity sha512-9Mcn9sFbGBAdmimWb2gLVDtFJzeKtDGIr76TUqmjZrw9LFXBMSU70lcs+C0/7fyCd6iBDqmksUcCOUIkisPHsQ==
+
+csstype@^2.6.4, csstype@^2.6.6:
+  version "2.6.8"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.8.tgz#0fb6fc2417ffd2816a418c9336da74d7f07db431"
+  integrity sha512-msVS9qTuMT5zwAGCVm4mxfrZ18BNc6Csd0oJAtiFMZ1FAx1CCvy2+5MDmYoix63LM/6NDbNtodCiGYGmFgO0dA==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -13135,6 +13175,11 @@ typeface-ibm-plex-sans@^0.0.75:
   version "0.0.75"
   resolved "https://registry.yarnpkg.com/typeface-ibm-plex-sans/-/typeface-ibm-plex-sans-0.0.75.tgz#47fffee4b9004e9d22300ed99bb679cbeed5c6ff"
   integrity sha512-IBxDEt5r0Xo5EshGBb1CR1ec3ApNI0jK0o2gSGNZIoKml9q99a/Qcbb8u8IK0x/M+nso8FzcMW03Hz6gSfCIAg==
+
+typeface-spectral@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-spectral/-/typeface-spectral-0.0.72.tgz#2504c164f034186724ed8674e2d991e7bae7281c"
+  integrity sha512-LT2lTLHv2IjftFdMdlYsMctoETXPj9bAHX6DtAd1iHfxoRO7jS/XU63uNdX6L2Bdz1B+T6iE3+hf3BIDR0XwiA==
 
 ua-parser-js@^0.7.18:
   version "0.7.20"
