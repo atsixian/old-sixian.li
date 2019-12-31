@@ -1,7 +1,8 @@
-import { graphql } from "gatsby"
-import PostComponent from "@lekoarts/gatsby-theme-minimal-blog-core/src/components/post"
+import { graphql } from "gatsby";
+import PostComponent from "@lekoarts/gatsby-theme-minimal-blog-core/src/components/post";
+import "katex/dist/katex.min.css"; // Add math support for post template
 
-export default PostComponent
+export default PostComponent;
 
 export const query = graphql`
   query($slug: String!) {
@@ -26,4 +27,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
