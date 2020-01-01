@@ -8,19 +8,7 @@ import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-s
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo";
 
-type PostsProps = {
-  posts: {
-    slug: string;
-    title: string;
-    date: string;
-    tags?: {
-      name: string;
-      slug: string;
-    }[];
-  }[];
-};
-
-const Blog = ({ posts }: PostsProps) => {
+const Blog = ({ posts }) => {
   const { tagsPath, basePath } = useSiteMetadata();
 
   return (

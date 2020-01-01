@@ -1,5 +1,6 @@
 .github
 CHANGELOG.md
+.ghost.json
 
 # Logs
 logs

@@ -1,7 +1,7 @@
-import { graphql } from "gatsby"
-import BlogComponent from "@lekoarts/gatsby-theme-minimal-blog-core/src/components/blog"
+import { graphql } from "gatsby";
+import BlogComponent from "@lekoarts/gatsby-theme-minimal-blog-core/src/components/blog";
 
-export default BlogComponent
+export default BlogComponent;
 
 export const query = graphql`
   query {
@@ -16,5 +16,17 @@ export const query = graphql`
         }
       }
     }
+
+    allGhostPost(sort: { fields: published_at, order: DESC }) {
+      nodes {
+        slug
+        title
+        published_at(formatString: "MMMM DD, YYYY")
+        tags {
+          name
+          slug
+        }
+      }
+    }
   }
-`
+`;
