@@ -1,19 +1,28 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui";
-import { Link } from "gatsby";
-import { Heading, Flex } from "@theme-ui/components";
+import { Flex, Heading } from "@theme-ui/components";
+import { Link, graphql } from "gatsby";
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout";
-import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing";
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
+import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing";
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo";
+import cloneDeep from "lodash/cloneDeep";
 
-const Blog = ({ posts }) => {
+const Tag = ({ data, pageContext }) => {
+  const { allGhostPost } = data;
   const { tagsPath, basePath } = useSiteMetadata();
+  const posts = cloneDeep(allGhostPost.nodes);
+  // Change the key name, and modify the slug, deepCopy is essential
+  posts.map(post => {
+    post["date"] = post["published_at"];
+    delete post["published_at"];
+    post["slug"] = `${basePath}/${post["slug"]}`;
+  });
 
   return (
     <Layout>
-      <SEO title="Posts" />
+      <SEO title={`Tag: ${pageContext.name}`} />
       <Flex
         sx={{
           alignItems: `center`,
@@ -22,7 +31,7 @@ const Blog = ({ posts }) => {
         }}
       >
         <Heading variant="h2" as="h2">
-          Posts
+          {pageContext.name}
         </Heading>
         <Styled.a
           as={Link}
@@ -37,4 +46,20 @@ const Blog = ({ posts }) => {
   );
 };
 
-export default Blog;
+export default Tag;
+
+export const query = graphql`
+  query($slug: String!) {
+    allGhostPost(filter: { tags: { elemMatch: { slug: { eq: $slug } } } }) {
+      nodes {
+        slug
+        title
+        published_at(formatString: "MMMM DD, YYYY")
+        tags {
+          name
+          slug
+        }
+      }
+    }
+  }
+`;

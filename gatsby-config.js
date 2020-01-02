@@ -140,6 +140,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-ghost`,
       options:

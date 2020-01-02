@@ -50,3 +50,21 @@ export default ({ data }) => {
 3. Set up hooks for Ghost update with Netlify
 4. Add environment variables in Netlify because I don't want to expose my app API key
 5. Try to fix tags
+
+### Tags fixed
+
+mergeTwoResults
+
+Another problem: how to handle posts from Ghost with existing tags?
+Expected result: Show the merged results in the tag page. Display all posts with the same tag no matter whatever the source is.
+
+Solution:
+The same as the homepage one. Combine posts from two sources with the same tag and sort by date. `sortByDate` utility function
+
+### Create posts and tags pages for Ghost posts in `gatsby-node.js`
+
+Some tags only exist at the Ghost side, so I need to create tags pages for them following `/${basePath}/{$tagPath}/{tagName}`
+
+### Math support is done via Helmet
+
+add code injection to <head>
