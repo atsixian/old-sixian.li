@@ -136,8 +136,9 @@ export default {
     }
   },
   images: {
-    width: 48,
-    height: 48,
-    borderRadius: 99999
+    width: `48px`,
+    // height: `48px`,
+    maxWidth: `100%`,
+    height: `auto`
   }
 };

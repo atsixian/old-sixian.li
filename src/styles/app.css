@@ -1,0 +1,5 @@
+img {
+  max-width: 100%;
+  border: 10;
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(78, 78, 78));
+}
