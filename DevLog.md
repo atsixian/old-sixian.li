@@ -100,3 +100,5 @@ export default () => (
 ```
 
 ### Add image zoom
+
+### Show excerpt in the blog list

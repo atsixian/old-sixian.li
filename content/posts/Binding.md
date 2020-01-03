@@ -2,7 +2,7 @@
 title: Binding & Closure
 date: 2019-01-23
 tags: ["Functional Programming"]
-exerpt: Binding != Assignment
+excerpt: Binding != Assignment
 ---
 
 ## Binding & Closure

@@ -2,7 +2,7 @@
 title: Number of submatrices that sum to target
 date: 2019-10-27 13:20:59
 tags: ["Algorithm", "LeetCode"]
-exerpt: Explanations with pictures
+excerpt: Explanations with pictures
 ---
 
 This article is a complete analysis of [1074. Number of submatrices that sum to target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) from LeetCode.
@@ -25,7 +25,7 @@ However, each time we need to sum up all entries in the submatrix, giving us $O(
 
 Do we need to sum up all entries in a submatrix every time? Can we reuse some computations?
 
-Observation from a simple case: if the "height" of the matrix is 1, it is essentially an array. Let `sum[i]` denote the sum of the subarray from index `0` to `i`. If we want to know `sum[3]`, we only need to add the third element to `sum[2]`. So we can store `sum[i]`, and the addition only costs `$O(1)$`.
+Observation from a simple case: if the "height" of the matrix is 1, it is essentially an array. Let `sum[i]` denote the sum of the subarray from index `0` to `i`. If we want to know `sum[3]`, we only need to add the third element to `sum[2]`. So we can store `sum[i]`, and the addition only costs $O(1)$.
 
 We can extend the idea to 2D to reuse computations:
 

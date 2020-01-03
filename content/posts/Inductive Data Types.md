@@ -2,7 +2,7 @@
 title: Inductive Data Types
 date: 2019-01-21
 tags: ["Functional Programming"]
-exerpt: Tree as an example
+excerpt: Tree as an example
 ---
 
 Lecture notes for COMP302.

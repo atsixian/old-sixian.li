@@ -2,7 +2,7 @@
 title: Ubuntu 18.04 Remap mouse buttons
 date: 2019-08-12
 tags: ["Ubuntu"]
-exerpt: Remap buttons on a *wireless* mouse
+excerpt: Remap buttons on a *wireless* mouse
 ---
 
 ## Goals:

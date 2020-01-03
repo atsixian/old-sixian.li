@@ -14,6 +14,7 @@ export const query = graphql`
           name
           slug
         }
+        excerpt
       }
     }
 
@@ -26,6 +27,7 @@ export const query = graphql`
           name
           slug
         }
+        excerpt
       }
     }
   }

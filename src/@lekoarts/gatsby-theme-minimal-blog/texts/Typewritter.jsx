@@ -5,14 +5,16 @@ import { jsx } from "theme-ui";
 
 export default () => {
   return (
-    <div style={{ fontSize: "40px", fontFamily: "spectral, serif" }}>
+    <div sx={{ fontSize: [3, 4, 5], fontFamily: "spectral, serif" }}>
+      {/* Title */}
       <Typed
-        sx={{ fontSize: "30px", color: `secondary` }}
+        sx={{ fontSize: [2, 3, 4], color: `secondary` }}
         strings={["Random facts"]}
         showCursor={false}
         typeSpeed={30}
       />
       <br />
+      {/* Strings to be typed */}
       <Typed
         strings={[
           "Hate repeating",

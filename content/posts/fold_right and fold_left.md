@@ -2,7 +2,7 @@
 title: fold_right and fold_left
 date: 2019-01-17
 tags: ["Functional Programming"]
-exerpt: fold in OCaml
+excerpt: fold in OCaml
 ---
 
 credits: textbook from Cornell's [cs 3110](https://www.cs.cornell.edu/courses/cs3110/2019sp/textbook/hop/fold_left.html).
@@ -27,7 +27,7 @@ let rec concat = function
 
 We notice that these two functions are very similar. The only differences are the base case value (`0` and `""`) and the operator (`+` and `^`).
 
-We love exerptions. So we rewrite these two functions as
+We love excerptions. So we rewrite these two functions as
 
 ```ocaml
 let rec combine op init = function

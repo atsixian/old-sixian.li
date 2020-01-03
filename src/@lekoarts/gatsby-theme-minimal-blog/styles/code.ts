@@ -26,7 +26,8 @@ export default {
       ".token-line": {
         pl: 3
       }
-    }
+    },
+    mt: `-1rem`
   },
   ".token": {
     display: `inline-block`
@@ -58,19 +59,18 @@ export default {
       mt: 0
     },
     // Language Label
-    'pre[class*="language-"]:before': {
+    'pre[class*="language-"]::before': {
       bg: `white`,
-      borderRadius: `0 0 0.25rem 0.25rem`,
+      borderRadius: `0 0 0.5rem 0.5rem`,
       color: `black`,
-      fontSize: `12px`,
+      fontSize: [12, 13, 14],
       fontFamily: `monospace`,
       letterSpacing: `0.025rem`,
-      padding: `0.1rem 0.5rem`,
-      position: `absolute`,
-      right: `1rem`,
+      padding: `0.4rem 0.5rem`,
+      position: `sticky`,
+      left: `1rem`,
       textAlign: `right`,
-      textTransform: `uppercase`,
-      top: 0
+      textTransform: `uppercase`
     },
     'pre[class~="language-python"]:before': {
       content: `"py"`,

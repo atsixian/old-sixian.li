@@ -2,7 +2,7 @@
 title: Stream
 date: 2019-03-25
 tags: ["Functional Programming"]
-exerpt: Infinite data structure
+excerpt: Infinite data structure
 ---
 
 Source code from [COMP302 course page](https://www.cs.mcgill.ca/~prakash/Courses/302/Notes/streams.ml). Some helper functions are not shown here.

@@ -107,31 +107,33 @@ const Code = ({
               <div>{title}</div>
             </div>
           )}
-          <div className="gatsby-highlight" data-language={language}>
-            <pre
-              className={className}
-              style={style}
-              data-linenumber={hasLineNumbers}
-            >
-              {tokens.map((line, i) => {
-                const lineProps = getLineProps({ line, key: i });
+          <div className="code-container" data-language={language}>
+            <div className="gatsby-highlight" data-language={language}>
+              <pre
+                className={className}
+                style={style}
+                data-linenumber={hasLineNumbers}
+              >
+                {tokens.map((line, i) => {
+                  const lineProps = getLineProps({ line, key: i });
 
-                if (shouldHighlightLine(i)) {
-                  lineProps.className = `${lineProps.className} highlight-line`;
-                }
+                  if (shouldHighlightLine(i)) {
+                    lineProps.className = `${lineProps.className} highlight-line`;
+                  }
 
-                return (
-                  <div {...lineProps}>
-                    {hasLineNumbers && (
-                      <span className="line-number-style">{i + 1}</span>
-                    )}
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                );
-              })}
-            </pre>
+                  return (
+                    <div {...lineProps}>
+                      {hasLineNumbers && (
+                        <span className="line-number-style">{i + 1}</span>
+                      )}
+                      {line.map((token, key) => (
+                        <span {...getTokenProps({ token, key })} />
+                      ))}
+                    </div>
+                  );
+                })}
+              </pre>
+            </div>
           </div>
         </React.Fragment>
       )}

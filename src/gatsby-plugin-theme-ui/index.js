@@ -54,12 +54,12 @@ export default {
     divide: tailwind.colors.gray[4],
     modes: {
       dark: {
-        text: tailwind.colors.gray[2],
-        primary: tailwind.colors.orange[4],
-        secondary: tailwind.colors.indigo[1],
+        text: tailwind.colors.gray[3],
+        primary: tailwind.colors.indigo[2],
+        secondary: tailwind.colors.gray[5],
         toggleIcon: `#F5D76E`,
         background: `#1A202C`,
-        heading: tailwind.colors.orange[4],
+        heading: tailwind.colors.indigo[3],
         divide: tailwind.colors.indigo[2]
       }
     }
@@ -83,7 +83,7 @@ export default {
       backgroundColor: `background`
     },
     p: {
-      fontSize: [2, 2, 3],
+      fontSize: [1, 2, 3],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
