@@ -1,13 +1,12 @@
 /** @jsx jsx */
 import { graphql } from "gatsby";
-import { Helmet } from "react-helmet";
 import { jsx, BaseStyles } from "theme-ui";
 import { Heading } from "@theme-ui/components";
 import React from "react";
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout";
 import ItemTags from "@lekoarts/gatsby-theme-minimal-blog/src/components/item-tags";
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo";
-import "../styles/app.css";
+import Math from "./math-support";
 
 type PostProps = {
   data: {
@@ -28,38 +27,9 @@ type PostProps = {
   };
 };
 
-const px = [`32px`, `16px`, `8px`, `4px`];
-const shadow = px.map(v => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`);
-
 const Post = ({ data: { ghostPost } }: PostProps) => (
   <Layout>
-    <div>
-      {ghostPost.codeinjection_head ? (
-        <Helmet>
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.css"
-            crossorigin="anonymous"
-          />
-          <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.js"
-            crossorigin="anonymous"
-          ></script>
-          <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js"
-            crossorigin="anonymous"
-            onload="renderMathInElement(document.body);"
-          ></script>
-          <script
-            type="text/javascript"
-            async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"
-          ></script>
-        </Helmet>
-      ) : null}
-    </div>
+    <Math />
     <SEO
       title={ghostPost.title}
       description={ghostPost.excerpt}
@@ -92,18 +62,13 @@ const Post = ({ data: { ghostPost } }: PostProps) => (
     </p>
     <section
       sx={{
-        my: 5,
-        ".gatsby-resp-image-wrapper": {
-          my: [4, 4, 5],
-          boxShadow: shadow.join(`, `)
-        }
+        my: 5
       }}
     >
       <BaseStyles>
         <div
-          className="content-body"
           dangerouslySetInnerHTML={{
-            __html: ghostPost.html
+            __html: ghostPost.codeinjection_head + ghostPost.html
           }}
         />
       </BaseStyles>

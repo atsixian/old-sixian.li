@@ -56,8 +56,8 @@ module.exports = {
     // Navigation links
     navigation: [
       {
-        title: `Posts`,
-        slug: `/posts` // I want the default homepage to be /blog
+        title: `Blog`,
+        slug: `/blog` // I want the default homepage to be /blog
       },
       {
         title: `About`,
@@ -102,27 +102,27 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
-        basePath: `/blog`,
-        blogPath: `/posts`,
+        basePath: `/`,
+        blogPath: `/blog`,
         mdx: false // disabling mdx from the theme and redefine it here for new plugins
       }
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: process.env.GOOGLE_ANALYTICS_ID
+    //   }
+    // },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Sixian Li's Blog`,
+        short_name: `sixian.li-blog`,
+        description: `Attempts to capture floating thoughts in Sixian Li's mind`,
         start_url: `/blog`,
         background_color: `#fff`,
-        theme_color: `#6B46C1`,
+        theme_color: `#f6ad55`,
         display: `standalone`,
         icons: [
           {

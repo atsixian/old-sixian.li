@@ -1,11 +1,14 @@
 import { tailwind } from "@theme-ui/presets";
 import "typeface-spectral";
 
+const px = [`32px`, `16px`, `8px`, `4px`];
+const shadow = px.map(v => `rgba(78,78,78, 0.15) 0px ${v} ${v} 0px`);
+
 const headingStyles = {
   h1: {
     ...tailwind.styles.h1,
     color: `heading`,
-    fontSize: [5, 6, 7],
+    fontSize: [6, 7, 8],
     mt: 2
   },
   h2: {
@@ -67,6 +70,12 @@ export default {
     body: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`
   },
   styles: {
+    img: {
+      maxWidth: `100%`,
+      height: `auto`,
+      borderRadius: 3,
+      boxShadow: shadow.join(",")
+    },
     ...tailwind.styles,
     root: {
       ...tailwind.styles.root,
@@ -74,7 +83,7 @@ export default {
       backgroundColor: `background`
     },
     p: {
-      fontSize: [1, 1, 2],
+      fontSize: [2, 2, 3],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
@@ -134,11 +143,5 @@ export default {
       fontSize: [1, 2, 3],
       color: `text`
     }
-  },
-  images: {
-    width: `48px`,
-    // height: `48px`,
-    maxWidth: `100%`,
-    height: `auto`
   }
 };

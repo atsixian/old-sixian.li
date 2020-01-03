@@ -1,5 +1,5 @@
 import React from "react";
-import Blog from "../../gatsby-theme-minimal-blog/components/blog";
+import Blog from "@lekoarts/gatsby-theme-minimal-blog/src/components/blog";
 import { sortByDate } from "./util";
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
 import cloneDeep from "lodash/cloneDeep";
