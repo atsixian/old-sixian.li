@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://ghost.sixian.li",
+    "contentApiKey": "b283729248f93e053ffd42c1dd"
+  },
+  "production": {
+    "apiUrl": "https://ghost.sixian.li",
+    "contentApiKey": "b283729248f93e053ffd42c1dd"
+  }
+}
