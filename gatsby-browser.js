@@ -1,5 +1,8 @@
 import mediumZoom from "medium-zoom";
 
+// This file is adapted from the plugin https://github.com/JaeYeopHan/gatsby-remark-images-medium-zoom
+// It doesn't work with MDX files, so I manually added all selectors for external images
+
 // @see https://github.com/francoischalifour/medium-zoom#options
 const defaultOptions = {
   margin: 24,
@@ -9,7 +12,7 @@ const defaultOptions = {
   template: null,
   zIndex: 999,
   excludedSelector: null,
-  includedSelector: `[src$='.png'], [src$='.gif'], [src$='#gimg']`
+  includedSelector: `[src$='.png'], [src$='.gif'], [src$='#gimg']` // Add your choices here
 };
 
 // @see https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-remark-images/src/constants.js#L1
@@ -98,8 +101,4 @@ export const onRouteUpdate = _ => {
 
   onFCP(() => applyZoomEffect(options));
   applyZoomEffect(options);
-  // if (window.MathJax !== undefined) {
-  //   alert("HI");
-  //   MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-  // }
 };
