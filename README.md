@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://minimal-blog.lekoarts.de">
-    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
+  <a href="https://www.sixian.li">
+    <img alt="LekoArts" src="https://i.imgur.com/P2ABXY8.png" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby Starter: Minimal Blog
+  Gatsby Starter: Minimal Blog Enhanced
 </h1>
 
 <p align="center">
@@ -12,9 +12,6 @@
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Minimal Blog is released under the MIT license." />
   </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
-  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-  </a>
   <a href="https://app.netlify.com/sites/minimal-blog/deploys">
     <img src="https://api.netlify.com/api/v1/badges/f466015c-14f4-440d-a92b-0b0e30de609a/deploy-status" alt="Netlify Status" />
   </a>
@@ -81,7 +78,7 @@ Since the underlying theme ships with [prism-react-renderer](https://github.com/
 When you add a language (such as e.g. `js` or `javascript`) to the code block, a little tab will appear at the top left corner.
 
 ````
-```js
+​```js
 // code goes here
 ```
 ````

@@ -68,6 +68,7 @@ Some tags only exist at the Ghost side, so I need to create tags pages for them 
 ### Math support is done via Helmet
 
 Get code injection from `ghostPost.codeinjection_head` and wrap it in `Helmet`
+This is tricky, we need helmet and `gatsby-rss.js`
 
 ```javascript
 import React from "react";
@@ -101,4 +102,8 @@ export default () => (
 
 ### Add image zoom
 
+medium zoom is not getting arguments from MDX plugin
+
 ### Show excerpt in the blog list
+
+### Add projects page

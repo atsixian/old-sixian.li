@@ -21,7 +21,7 @@ const headingStyles = {
     ...tailwind.styles.h3,
     color: `heading`,
     fontSize: [3, 4, 5],
-    mt: 3
+    mt: 4
   },
   h4: {
     ...tailwind.styles.h4,
@@ -54,13 +54,13 @@ export default {
     divide: tailwind.colors.gray[4],
     modes: {
       dark: {
-        text: tailwind.colors.gray[3],
-        primary: tailwind.colors.indigo[2],
-        secondary: tailwind.colors.gray[5],
+        text: tailwind.colors.gray[4],
+        primary: tailwind.colors.gray[3],
+        secondary: tailwind.colors.orange[4],
         toggleIcon: `#F5D76E`,
         background: `#1A202C`,
         heading: tailwind.colors.indigo[3],
-        divide: tailwind.colors.indigo[2]
+        divide: tailwind.colors.indigo[3]
       }
     }
   },
@@ -102,6 +102,10 @@ export default {
       p: {
         fontStyle: `italic`
       }
+    },
+    li: {
+      fontSize: [1, 2, 3],
+      color: `text`
     }
   },
   text: {
@@ -111,6 +115,13 @@ export default {
       fontWeight: `heading`,
       lineHeight: `heading`,
       color: `heading`
+    }
+  },
+  images: {
+    avatar: {
+      width: 200,
+      height: 200,
+      position: `center`
     }
   },
   dividers: {

@@ -24,15 +24,15 @@ const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => (
     <Styled.a
       as={Link}
       to={post.slug}
-      sx={{ fontSize: [1, 2, 3], color: `text` }}
+      sx={{ fontSize: [1, 2, 3], color: `secondary` }}
     >
       {post.title}
     </Styled.a>
     <p
       sx={{
-        color: `secondary`,
+        color: `text`,
         mt: 1,
-        a: { color: `secondary` },
+        a: { color: `text` },
         fontSize: [1, 1, 2]
       }}
     >

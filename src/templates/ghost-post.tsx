@@ -68,7 +68,7 @@ const Post = ({ data: { ghostPost } }: PostProps) => (
       <BaseStyles>
         <div
           dangerouslySetInnerHTML={{
-            __html: ghostPost.codeinjection_head + ghostPost.html
+            __html: ghostPost.html
           }}
         />
       </BaseStyles>

@@ -120,7 +120,7 @@ module.exports = {
         name: `Sixian Li's Blog`,
         short_name: `sixian.li-blog`,
         description: `Attempts to capture floating thoughts in Sixian Li's mind`,
-        start_url: `/blog`,
+        start_url: `/`,
         background_color: `#fff`,
         theme_color: `#f6ad55`,
         display: `standalone`,
