@@ -20,8 +20,8 @@ export default () => {
           "Hate repeating",
           "Junior undergrad",
           "Love programming",
-          "Writting is fun",
-          "Writting is hard",
+          "Writing is fun",
+          "Writing is hard",
           "New Year's Resolutions suck",
           "Brussel Sprouts are the BEST",
           "Never a morning person"
