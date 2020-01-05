@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import avatar from "./avatar.png";
-import { Avatar, Text, Box } from "@theme-ui/components";
+import { Text, Box } from "@theme-ui/components";
 import { jsx } from "theme-ui";
-
+import Image from "gatsby-image";
+import useAvatar from "../../../src/hooks/use-avatar";
 export default () => {
+  const avatar = useAvatar();
   return (
     <div
       sx={{
@@ -12,16 +13,16 @@ export default () => {
         gridTemplateColumns: ["auto", "0.6fr 1fr"]
       }}
     >
-      {/* Avatar uses the values defined in theme.images.avatar */}
-      <Avatar
-        src={avatar}
-        // center the image and keep the aspect ratio
+      <Image
+        fixed={avatar.childImageSharp.fixed}
         sx={{
           m: "auto", // shorthand for all margins. Just center it.
-          minWidth: "50%",
-          height: "auto",
           border: "3px dotted",
-          borderColor: "primary"
+          borderColor: "primary",
+          borderRadius: "100%"
+        }}
+        imgStyle={{
+          borderRadius: `50%`
         }}
       />
       <Box sx={{ mx: "auto", px: 3, py: [5, 1, 1] }}>

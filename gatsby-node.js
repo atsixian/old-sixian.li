@@ -1,5 +1,3 @@
-// import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata";
-
 const path = require(`path`);
 
 exports.createPages = async ({ graphql, actions }) => {
