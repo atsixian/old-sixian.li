@@ -3,7 +3,7 @@ import Typed from "react-typed";
 import "react-typed/dist/animatedCursor.css";
 import { jsx } from "theme-ui";
 
-export default () => {
+export default (props) => {
   return (
     <div sx={{ fontSize: [3, 4, 5], fontFamily: "spectral, serif" }}>
       {/* Title */}
@@ -14,18 +14,8 @@ export default () => {
         typeSpeed={30}
       />
       <br />
-      {/* Strings to be typed */}
       <Typed
-        strings={[
-          "Hate repeating",
-          "Junior undergrad",
-          "Love programming",
-          "Writing is fun",
-          "Writing is hard",
-          "New Year's Resolutions suck",
-          "Brussel Sprouts are the BEST",
-          "Never a morning person"
-        ]}
+        strings={props.strings}
         startDelay={1500}
         typeSpeed={55}
         backSpeed={30}
