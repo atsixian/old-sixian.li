@@ -67,7 +67,7 @@ You can follow the customization guide from [@lekoarts/gatsby-theme-minimal-blog
 
 #### Changing the “Random Facts"
 
-Go to `src/@lekoarts/gatsby-theme-minimal-blog/texts/`, change `strings` in `Typewritte.jsx`. Or if you want to replace the whole section, just change `hero.mdx` to whatever you want.
+Go to `src/@lekoarts/gatsby-theme-minimal-blog/texts/`, change `strings` in `Typewriter.jsx`. Or if you want to replace the whole section, just change `hero.mdx` to whatever you want.
 
 #### Can I disable Ghost?
 
