@@ -37,7 +37,7 @@ export default {
     // color: `rgb(214, 222, 235)`,
     color: `text`,
     fontFamily: `"Fira Code", monospace`,
-    fontSize: 2,
+    fontSize: [1, 2, 3],
     borderRadius: 5,
     px: 1,
     py: 1

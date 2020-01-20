@@ -85,7 +85,8 @@ module.exports = {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
               strict: `ignore`
             }
-          }
+          },
+          `gatsby-remark-smartypants`
         ],
         plugins: [
           {
