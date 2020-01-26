@@ -18,30 +18,8 @@ const defaultOptions = {
 // @see https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-remark-images/src/constants.js#L1
 const imageClass = ".gatsby-resp-image-image";
 
-const FIRST_CONTENTFUL_PAINT = "first-contentful-paint";
 const ZOOM_STYLE_ID = "medium-zoom-styles";
 const TRANSITION_EFFECT = "opacity 0.5s, transform .3s cubic-bezier(.2,0,.2,1)";
-
-function onFCP(callback) {
-  if (!window.performance) {
-    return;
-  }
-
-  const po = new PerformanceObserver(list =>
-    list
-      .getEntries()
-      .filter(({ entryType }) => entryType === "paint")
-      .map(({ name }) => name === FIRST_CONTENTFUL_PAINT)
-      .forEach(callback)
-  );
-
-  try {
-    po.observe({ entryTypes: ["measure", "paint"] });
-  } catch (e) {
-    console.error(e);
-    po.disconnect();
-  }
-}
 
 function injectStyles(options) {
   const styleTag = document.querySelector(`#${ZOOM_STYLE_ID}`);
@@ -99,6 +77,5 @@ export const onRouteUpdate = _ => {
   const options = { ...defaultOptions };
   injectStyles(options);
 
-  onFCP(() => applyZoomEffect(options));
   applyZoomEffect(options);
 };

@@ -31,17 +31,17 @@ module.exports = {
     // Used for the title template on pages other than the index site
     siteTitle: `Sixian Li`,
     // Default title of the page
-    siteTitleAlt: `Sixian Li's Blog`,
+    siteTitleAlt: `Sixian Li`,
     // Can be used for e.g. JSONLD
     siteHeadline: `Sixian Li`,
     // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://blog.sixian.li`,
+    siteUrl: `https://sixian.li`,
     // Used for SEO`
     siteDescription: `Sixian Li's life and thoughts`,
     // Will be set on the <html /> tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
+    siteImage: `/banner.png`,
     // Links displayed in the header on the right side
     externalLinks: [
       {
@@ -118,8 +118,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Sixian Li's Blog`,
-        short_name: `sixian.li-blog`,
+        name: `Sixian Li`,
+        short_name: `sixian.li`,
         description: `Attempts to capture floating thoughts in Sixian Li's mind`,
         start_url: `/`,
         background_color: `#fff`,

@@ -123,14 +123,18 @@ export default {
     'pre[class~="language-text"]:before': {
       content: `"text"`
     },
-    "pre[class='language-shell']:before": {
-      content: `'shell'`
+    "pre[class~='language-shell']:before": {
+      content: `'shell'`,
+      background: `#e6ffed`,
+      color: `black`
     },
-    "pre[class='language-sh']:before": {
+    "pre[class~='language-sh']:before": {
       content: `'sh'`
     },
-    "pre[class='language-bash']:before": {
-      content: `'bash'`
+    "pre[class~='language-bash']:before": {
+      content: `'bash'`,
+      background: `#00E278`,
+      color: `black`
     },
     "pre[class='language-yaml']:before": {
       content: `'yaml'`,
@@ -148,6 +152,16 @@ export default {
     "pre[class='language-diff']:before": {
       content: `'diff'`,
       background: `#e6ffed`
+    },
+    'pre[class~="language-ocaml"]:before': {
+      content: `"ocaml"`,
+      background: `#F18604`,
+      color: `white`
+    },
+    'pre[class~="language-haskell"]:before': {
+      content: `"haskell"`,
+      background: `#5C5082`,
+      color: `white`
     }
   },
   '.gatsby-highlight > code[class*="language-"], .gatsby-highlight > pre[class=*="language-"]': {
