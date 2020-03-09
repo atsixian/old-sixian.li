@@ -825,6 +825,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.7.7":
+  version "7.8.7"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.7.tgz#8fefce9802db54881ba59f90bb28719b4996324d"
+  integrity sha512-+AATMUFppJDw6aiR5NVPHqIQBlV/Pj8wY/EZH+lmvRdUo9xBaz/rF3alAwFJQavvKfeOlPE7oaaDHVbcySbCsg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.7.4.tgz#428a7d9eecffe27deac0a98e23bf8e3675d2a77b"
@@ -1290,6 +1297,14 @@
   integrity sha512-RzXAH419hnC6vF/ZAEv+k1JgbE/4G7veZo3RvwQDRfp2BFrwbJp9qasjccuk6RrQR/nWWgufaW/CGlL6NSBNGw==
   dependencies:
     "@babel/runtime" "^7.7.4"
+    hoist-non-react-statics "^3.3.1"
+
+"@loadable/component@^5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@loadable/component/-/component-5.12.0.tgz#34d056d15f53dc08d04e9203cad6867cf4f7306c"
+  integrity sha512-eDG7FPZ8tCFA/mqu2IrYV6eS+UxGBo21PwtEV9QpkpYrx25xKRXzJUm36yfQPK3o7jXu43xpPkwiU4mLWcjJlw==
+  dependencies:
+    "@babel/runtime" "^7.7.7"
     hoist-non-react-statics "^3.3.1"
 
 "@mdx-js/mdx@^1.5.1":
@@ -11111,7 +11126,7 @@ prompts@^2.3.0:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -11427,6 +11442,13 @@ react-live@^2.2.2:
     react-simple-code-editor "^0.10.0"
     unescape "^1.0.1"
 
+react-loadable@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/react-loadable/-/react-loadable-5.5.0.tgz#582251679d3da86c32aae2c8e689c59f1196d8c4"
+  integrity sha512-C8Aui0ZpMd4KokxRdVAm2bQtI03k2RMRNzOB+IipV3yxFTSVICv7WoUr5L9ALB5BmKO1iHgZtWM8EvYG83otdg==
+  dependencies:
+    prop-types "^15.5.0"
+
 react-p5@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/react-p5/-/react-p5-1.3.2.tgz#1b0b820e6bf1786982866112942890a938aeac17"
@@ -11619,6 +11641,11 @@ regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
+
+regenerator-runtime@^0.13.4:
+  version "0.13.4"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.4.tgz#e96bf612a3362d12bb69f7e8f74ffeab25c7ac91"
+  integrity sha512-plpwicqEzfEyTQohIKktWigcLzmNStMGwbOUbykx51/29Z3JOGYldaaNGK7ngNXV+UcoqvIMmloZ48Sr74sd+g==
 
 regenerator-transform@^0.14.0:
   version "0.14.1"

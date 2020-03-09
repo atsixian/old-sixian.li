@@ -3,7 +3,7 @@ import { jsx, useColorMode } from "theme-ui";
 import React from "react";
 import { Flex, Box } from "@theme-ui/components";
 import { Complex, fft, author } from "fourier-svg";
-import p5 from "p5";
+
 
 function withHook(Component) {
   return function WrappedComponent(props) {
@@ -21,11 +21,16 @@ class Fourier extends React.Component {
   }
 
   componentWillMount() {
-    this.updateWindowDimensions();
-    window.addEventListener("resize", this.updateWindowDimensions);
+    if (typeof window !== "undefined") {
+      this.updateWindowDimensions();
+      window.addEventListener("resize", this.updateWindowDimensions);
+    }
   }
 
   componentDidMount() {
+    const p5 = require("p5");
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
     this.myp5 = new p5(this.Sketch, this.myRef.current);
   }
 
