@@ -19,6 +19,7 @@
     "@lekoarts/gatsby-theme-minimal-blog": "^1.2.0",
     "@types/theme-ui": "^0.2.6",
     "@types/theme-ui__components": "^0.2.0",
+    "fourier-svg": "^1.0.1",
     "gatsby": "^2.18.18",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-google-analytics": "^2.1.31",
@@ -33,8 +34,10 @@
     "gatsby-source-ghost": "^4.0.3",
     "gatsby-transformer-remark": "^2.6.45",
     "katex": "^0.11.1",
+    "p5": "^1.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-p5": "^1.3.2",
     "react-typed": "^1.2.0",
     "typeface-spectral": "^0.0.72"
   },
