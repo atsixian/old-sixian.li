@@ -39,10 +39,10 @@ class Fourier extends React.Component {
   }
 
   updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    const w = window.innerWidth; // try to be responsive
+    this.setState({ width: w > 1400 ? w * 0.5 : w * 0.7, height: window.innerHeight / 2.7 });
   }
 
-  color = 123;
   Sketch = p5 => {
     let time = 0;
     let fourier = [];
@@ -84,7 +84,7 @@ class Fourier extends React.Component {
       path = [];
       samples = [];
 
-      p5.createCanvas(this.state.width * 0.8, this.state.height / 2.5);
+      p5.createCanvas(this.state.width, this.state.height);
 
       // scale the image to fit the canvas
       // if the scale is less than 1, it means the canvas is large enough
@@ -114,8 +114,6 @@ class Fourier extends React.Component {
       maxRadius = fourier.reduce((acc, circle) =>
         Math.max(acc, circle.amp)
       , 0);
-      console.log(maxRadius)
-
     };
 
     // Draw function
@@ -128,7 +126,7 @@ class Fourier extends React.Component {
         p5.height - maxRadius
       );
 
-      const v = epicycles(p5, o1.x, o1.y, p5.PI, fourier, 0.15, 0.8);
+      const v = epicycles(p5, o1.x, o1.y, p5.PI, fourier, 0.2, 0.8);
 
       path.unshift(v);
 
@@ -149,7 +147,7 @@ class Fourier extends React.Component {
     };
 
     p5.windowResized = () => {
-      p5.resizeCanvas(this.state.width * 0.8, this.state.height, false);
+      p5.resizeCanvas(this.state.width, this.state.height, false);
       p5.setup();
       p5.draw();
     };

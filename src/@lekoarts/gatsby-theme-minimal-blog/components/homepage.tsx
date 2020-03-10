@@ -7,7 +7,7 @@ import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-s
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes";
 import { Link } from "gatsby";
 import { jsx } from "theme-ui";
-import Hero from "../texts/hero.jsx";
+import Hero from "../texts/hero.mdx";
 
 type PostsProps = {
   posts: {

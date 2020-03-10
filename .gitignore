@@ -1,6 +1,7 @@
 .github
 CHANGELOG.md
 .history
+DevLog.md
 # Logs
 logs
 *.log
