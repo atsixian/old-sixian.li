@@ -36,7 +36,6 @@ class Fourier extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
-    console.log(this.myp5);
     this.myp5 = new p5(this.Sketch, this.myRef.current);
   }
 
