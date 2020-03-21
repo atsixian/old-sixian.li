@@ -57,8 +57,6 @@ const Post = ({ data: { ghostPost } }: PostProps) => (
           <ItemTags tags={ghostPost.tags} />
         </React.Fragment>
       )}
-      {` — `}
-      <span>{ghostPost.reading_time} min read</span>
     </p>
     <section
       sx={{

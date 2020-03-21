@@ -17,7 +17,6 @@ export const query = graphql`
       description
       body
       excerpt
-      timeToRead
       banner {
         childImageSharp {
           resize(width: 1200, quality: 90) {
