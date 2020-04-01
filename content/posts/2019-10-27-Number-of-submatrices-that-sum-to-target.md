@@ -29,7 +29,7 @@ Observation from a simple case: if the "height" of the matrix is 1, it is essent
 
 We can extend the idea to 2D to reuse computations:
 
-![Imgur](https://i.imgur.com/iW07t68.png)
+![Imgur](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/iW07t68.png)
 
 To get `sum[i, j]`, we use the following loop:
 
@@ -73,11 +73,11 @@ k &= \text{sum}[0, j] - \text{sum}[i-1]\\
 \end{aligned}
 $$
 
-![Imgur](https://i.imgur.com/FU3Tmyp.png)
+![Imgur](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/FU3Tmyp.png)
 
 The key observation is: #occurrences of `sum[0, j]-k` is equivalent to the number of subarrays that sum to `k` among all possible subarrays between `0` and `j`. Let's consider an example:
 
-![Imgur](https://i.imgur.com/sKxlck4.png)
+![Imgur](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/sKxlck4.png)
 
 ```python
 from collections import Counter
@@ -104,7 +104,7 @@ If we can control one dimension, we will reduce the matrix problem to the simple
 
 We first compute the prefix sum for each row, and we fix col `i` an col `j` to "convert" the submatrix to a subarray.
 
-![Imgur](https://i.imgur.com/z5LT919.png)
+![Imgur](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/z5LT919.png)
 
 ```python
 from collections import Counter

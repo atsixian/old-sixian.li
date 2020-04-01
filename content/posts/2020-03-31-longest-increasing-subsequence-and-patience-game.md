@@ -21,7 +21,7 @@ Explanation: The longest increasing subsequence is [2,3,7,101], therefore the le
 The $O(n^2)$ dynamic programming solution is quite straightforward. But I’m surprised to see the relationship between the card game **Patience** and LIS.
 
 <figure>
-  <img class="medium-zoom-image" src="https://i.imgur.com/AQWH8Tn.jpg" alt="deck" />
+  <img class="medium-zoom-image" src="https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/game.jpeg" alt="deck" />
   <figcaption>
     Picture from
     <a href="https://www.cs.princeton.edu/courses/archive/spring13/cos423/lectures/LongestIncreasingSubsequence.pdf">
@@ -29,7 +29,6 @@ The $O(n^2)$ dynamic programming solution is quite straightforward. But I’m su
     </a>
   </figcaption>
 </figure>
-
 
 ## Patience
 
@@ -45,7 +44,7 @@ To understand why it’s related to LIS, we need to make two observations.
 
 **For any legal strategy, $\#\text{piles}$ $\geq$ length of any increasing subsequence**
 
-![Imgur](https://i.imgur.com/Q1QAKZM.png)
+![Card](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/deck.png)
 
 **Claim**: Any increasing subsequence can use **at most one** card from each pile.
 
@@ -63,7 +62,7 @@ Idea: put the new card on the leftmost pile possible, i.e., the first pile from 
 
 If we play the game with this strategy, we will notice that top cards form an IS(increasing sequence). For example,
 
-![Imgur](https://i.imgur.com/oaCWJrf.jpg)
+![IS](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/game1.jpeg)
 
 `2 4 7 8 Q` is an IS.
 
@@ -75,7 +74,7 @@ Let’s prove this.
 
 #### Proof
 
-![Imgur](https://i.imgur.com/Q1QAKZM.png)
+![Deck](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/deck.png)
 
 Assume $x \lt y$, so we don’t have an IS. We have two cases:
 
@@ -107,9 +106,7 @@ From observation 2, we know top cards of piles increase from left to right at **
 
 In this case, the top cards are `2 4 7 8 Q`, but `4` comes **after** `7` in the original deck, so `4 -> 7` is not an IS.
 
-<img src="https://i.imgur.com/Vu3w8da.png" alt="Pointer" style="zoom:130%;" />
-
-
+<img src="https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/pointer1.png" alt="Pointer" style="zoom:130%;" />
 
 To keep track of a valid IS, **at the time of insertion** of a card $c$, we keep a pointer from $c$ to the current top card to the left of $c$. For example, when `5` is inserted, `3` is the top card on its left, so there’s an arrow from `5` to `3`.
 

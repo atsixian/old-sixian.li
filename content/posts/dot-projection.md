@@ -13,11 +13,11 @@ Multiplying a $ 1\times 2$ matrix $ \begin{bmatrix} u_{x} & u_{y} \end{bmatrix}$
 Questions
 What does multiplying by $ \begin{bmatrix} u_{x} & u_{y} \end{bmatrix}$ mean geometrically?
 How is this related to taking the dot product with the vector $ \begin{bmatrix} u_{x}\ u_{y} \end{bmatrix}$?
-![Imgur](https://i.imgur.com/exMKCKO.png)
+![Imgur](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/exMKCKO.png)
 
 Let $ \vec{i} ,\ \vec{j}$ be unit vectors in $ \mathbb{R}^{2}$, and let $ \vec{u} \ =\begin{bmatrix} u_{x}\ u_{y} \end{bmatrix} $ be a unit vector on line $ L$.
 
-![Imgur](https://i.imgur.com/gJpdM5h.png)
+![Imgur](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/gJpdM5h.png)
 
 But $ | \ proj_{\vec{i}} \ \vec{u} \ | $ is just the x-coordinate of $ \vec{u} ,\ u_{x}$. Now, if we want to know the orthogonal projection of any vector in $ \mathbb{R}^{2}$ onto line $ L$, we only need to find where $ \vec{i} \ ,\ \vec{j} $ land.
 Note: The projection outputs a scalar, the orange dot on the number line, not a 2D vector lying on the line. What we get is the component of a vector in the direction $ \vec{u}$.

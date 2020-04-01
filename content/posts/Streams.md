@@ -59,7 +59,7 @@ Below is a great picture that I found on [stackoverflow](https://stackoverflow.c
 fib = 1 : 1 : (zipWith (+) fib (tail fib))
 ```
 
-![Visualization](https://i.stack.imgur.com/VheDF.png)
+![Visualization](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/VheDF.png)
 
 ### Partial sum
 

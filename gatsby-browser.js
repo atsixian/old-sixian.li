@@ -12,7 +12,7 @@ const defaultOptions = {
   template: null,
   zIndex: 999,
   excludedSelector: null,
-  includedSelector: `[src$='.png'],[src$='.jpg'], [src$='.gif'], [src$='#gimg']` // Add your choices here
+  includedSelector: `[src$='.png'],[src$='.jpeg'],[src$='.jpg'], [src$='.gif'], [src$='#gimg']` // Add your choices here
 };
 
 // @see https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-remark-images/src/constants.js#L1
