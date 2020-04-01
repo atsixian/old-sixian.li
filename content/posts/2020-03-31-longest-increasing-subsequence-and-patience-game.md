@@ -50,7 +50,7 @@ To understand why it’s related to LIS, we need to make two observations.
 
 #### Proof
 
-Assume we used $y$ and $y'$ from this pile. Since $y$ is on top of $y’$, $y < y’$. So the only way to use both cards in an **increasing sequence** is to place $y’$ after $y$ in that sequence. But $y$ is on top of $y’$, so $y’$ comes **before** $y$ in the original array.
+Assume we used $y$ and $y'$ from this pile. Since $y$ is on top of $y'$, $y < y'$. So the only way to use both cards in an **increasing sequence** is to place $y'$ after $y$ in that sequence. But $y$ is on top of $y'$, so $y'$ comes **before** $y$ in the original array.
 
 For example, `[y', y] = [5, 2]`, `5 -> 2` is not an IS.
 
@@ -84,7 +84,7 @@ Assume $x \lt y$, so we don’t have an IS. We have two cases:
 
 2. $y$ comes after $x$
 
-   Since $x$ is put into the red pile, $x \gt y'$ or it’ll be in the blue pile by our greedy algorithm. $y$ is on top of $y’$, so $y \lt y’$. But we assumed $x \lt y$, so $x \lt y \lt y’$ which contradicts $x\gt y’$.
+   Since $x$ is put into the red pile, $x \gt y'$ or it’ll be in the blue pile by our greedy algorithm. $y$ is on top of $y'$, so $y \lt y'$. But we assumed $x \lt y$, so $x \lt y \lt y'$ which contradicts $x\gt y'$.
 
 With these two observations, we can go head and prove the duality.
 
@@ -106,7 +106,7 @@ From observation 2, we know top cards of piles increase from left to right at **
 
 In this case, the top cards are `2 4 7 8 Q`, but `4` comes **after** `7` in the original deck, so `4 -> 7` is not an IS.
 
-<img src="https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/pointer1.png" alt="Pointer" style="zoom:130%;" />
+![Pointer](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/pointer1.png)
 
 To keep track of a valid IS, **at the time of insertion** of a card $c$, we keep a pointer from $c$ to the current top card to the left of $c$. For example, when `5` is inserted, `3` is the top card on its left, so there’s an arrow from `5` to `3`.
 
