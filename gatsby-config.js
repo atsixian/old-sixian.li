@@ -1,30 +1,6 @@
 require(`dotenv`).config({
-  path: `.env`
+  path: `.env`,
 });
-
-let ghostConfig;
-
-try {
-  ghostConfig = require(`./.ghost`);
-} catch (e) {
-  ghostConfig = {
-    production: {
-      apiUrl: process.env.GHOST_API_URL,
-      contentApiKey: process.env.GHOST_CONTENT_API_KEY
-    }
-  };
-} finally {
-  const { apiUrl, contentApiKey } =
-    process.env.NODE_ENV === `development`
-      ? ghostConfig.development
-      : ghostConfig.production;
-
-  if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
-    throw new Error(
-      `GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`
-    ); // eslint-disable-line
-  }
-}
 
 module.exports = {
   siteMetadata: {
@@ -46,24 +22,24 @@ module.exports = {
     externalLinks: [
       {
         name: `Github`,
-        url: `https://github.com/Deerhound579`
+        url: `https://github.com/Deerhound579`,
       },
       {
         name: `Linkedin`,
-        url: `https://www.linkedin.com/in/lisixian/`
-      }
+        url: `https://www.linkedin.com/in/lisixian/`,
+      },
     ],
     // Navigation links
     navigation: [
       {
         title: `Blog`,
-        slug: `/blog` // I want the default homepage to be /blog
+        slug: `/blog`, // I want the default homepage to be /blog
       },
       {
         title: `About`,
-        slug: `/about`
-      }
-    ]
+        slug: `/about`,
+      },
+    ],
   },
   plugins: [
     {
@@ -76,17 +52,17 @@ module.exports = {
             options: {
               maxWidth: 960,
               quality: 90,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
           {
             resolve: `gatsby-remark-katex`,
             options: {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`
-            }
+              strict: `ignore`,
+            },
           },
-          `gatsby-remark-smartypants`
+          `gatsby-remark-smartypants`,
         ],
         plugins: [
           {
@@ -94,19 +70,19 @@ module.exports = {
             options: {
               maxWidth: 960,
               quality: 90,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
         basePath: `/`,
         blogPath: `/blog`,
-        mdx: false // disabling mdx from the theme and redefine it here for new plugins
-      }
+        mdx: false, // disabling mdx from the theme and redefine it here for new plugins
+      },
     },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
@@ -129,26 +105,19 @@ module.exports = {
           {
             src: `/android-chrome-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`
+            type: `image/png`,
           },
           {
             src: `/android-chrome-512x512.png`,
             sizes: `512x512`,
-            type: `image/png`
-          }
-        ]
-      }
+            type: `image/png`,
+          },
+        ],
+      },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-ghost`,
-      options:
-        process.env.NODE_ENV === `development`
-          ? ghostConfig.development
-          : ghostConfig.production
-    }
-    // `gatsby-plugin-webpack-bundle-analyser-v2`,
-  ]
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
+  ],
 };

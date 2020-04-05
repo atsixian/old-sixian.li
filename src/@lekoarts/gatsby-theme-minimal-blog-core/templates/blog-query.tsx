@@ -17,18 +17,5 @@ export const query = graphql`
         excerpt
       }
     }
-
-    allGhostPost(sort: { fields: published_at, order: DESC }) {
-      nodes {
-        slug
-        title
-        published_at(formatString: "MMMM DD, YYYY")
-        tags {
-          name
-          slug
-        }
-        excerpt
-      }
-    }
   }
 `;

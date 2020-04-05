@@ -18,7 +18,7 @@
 
 Built upon the awesome Gatsby theme [@lekoarts/gatsby-theme-minimal-blog](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog):
 
-> Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting. 
+> Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.
 
 ## Features
 
@@ -37,29 +37,23 @@ Built upon the awesome Gatsby theme [@lekoarts/gatsby-theme-minimal-blog](https:
 
 ## And **more**
 
-* Use [**Ghost**](https://ghost.org/) as the headless CMS. Write and manage your content anywhere, anytime with a nice [editor](https://ghost.org/faq/using-the-editor/)
+- Math support with KaTex[ demo page](https://sixian.li/my-favorite-proofs-from-analysis-1)
 
-  Note: You do need a running Ghost installation for this feature. Here’s a [guide](https://ghost.org/docs/setup/) on how to set up Ghost
-  ![Ghost as CMS](./demo/ghost_cms.png)
-
-* Math support with KaTex[ demo page](https://sixian.li/my-favorite-proofs-from-analysis-1)
-
-* Image zoom for local **and** external images in MDX files or Ghost posts
+- Image zoom for local **and** external images in MDX files or Ghost posts
 
   ![Zoom](./demo/image_zoom.gif)
-
-  
 
 * Show excerpt in the blog page list
 
   ![excerpt](./demo/excerpt.png)
 
+**NOTE** If you also want to use Ghost as a source of your posts, take a look at the branch `ghost`.
+
 TODO:
 
-* A reading progress bar to replace reading time since it’s not very accurate
-* Project page with project cards
-* Table of content for each post for an easier navigation
-* Suggestions are welcomed!
+- Project page with project cards
+- Table of content for each post for an easier navigation
+- Suggestions are welcomed!
 
 ## Customization
 
@@ -68,10 +62,6 @@ You can follow the customization guide from [@lekoarts/gatsby-theme-minimal-blog
 #### Changing the “Random Facts"
 
 Go to `src/@lekoarts/gatsby-theme-minimal-blog/texts/`, change `strings` in `Typewriter.jsx`. Or if you want to replace the whole section, just change `hero.mdx` to whatever you want.
-
-#### Can I disable Ghost?
-
-There's no easy switch to turn it on and off for now, but I plan to add this feature in the future.
 
 ## 🎓 Learning Gatsby
 

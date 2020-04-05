@@ -19,17 +19,5 @@ export const query = graphql`
         }
       }
     }
-    
-    allGhostPost(filter: { tags: { elemMatch: { slug: { eq: $slug } } } }) {
-      nodes {
-        slug
-        title
-        published_at(formatString: "MMMM DD, YYYY")
-        tags {
-          name
-          slug
-        }
-      }
-    }
   }
 `;

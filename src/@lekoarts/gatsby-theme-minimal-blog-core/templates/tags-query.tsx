@@ -11,12 +11,5 @@ export const query = graphql`
         totalCount
       }
     }
-
-    allGhostPost(sort: { fields: tags___name, order: DESC }) {
-      group(field: tags___name) {
-        fieldValue
-        totalCount
-      }
-    }
   }
 `;
