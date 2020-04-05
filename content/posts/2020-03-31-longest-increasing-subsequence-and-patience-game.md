@@ -34,7 +34,7 @@ The $O(n^2)$ dynamic programming solution is quite straightforward. But I’m su
 
 **Rules**
 
-1. You can only place a lowered-valued card on top of a higher-valued card, e.g., `2` on top of `3`. Note Ace is NOT `1` here.
+1. You can only place a lowered-valued(or equal-valued) card on top of a higher-valued card, e.g., `2` on top of `3`. Note Ace is NOT `1` here.
 
 2. You can form a new pile and put your card onto it.
 
@@ -50,7 +50,11 @@ To understand why it’s related to LIS, we need to make two observations.
 
 #### Proof
 
-Assume we used $y$ and $y'$ from this pile. Since $y$ is on top of $y'$, $y < y'$. So the only way to use both cards in an **increasing sequence** is to place $y'$ after $y$ in that sequence. But $y$ is on top of $y'$, so $y'$ comes **before** $y$ in the original array.
+Assume we used $y$ and $y'$ from this pile. Since $y$ is on top of $y'$, $y \le y’$. 
+
+If $y = y’$, they can’t form an **increasing** sequence. **“increasing”** is different from **"non-decreasing”**.
+
+If $y \lt y’$, the only way to use both cards in an **increasing sequence** is to place $y'$ after $y$ in that sequence. But $y$ is on top of $y'$, so $y'$ comes **before** $y$ in the original array.
 
 For example, `[y', y] = [5, 2]`, `5 -> 2` is not an IS.
 
@@ -58,7 +62,7 @@ Thus, you can’t form an IS with more than one card from a pile $\Rightarrow$ l
 
 ### Greedy algorithm
 
-Idea: put the new card on the leftmost pile possible, i.e., the first pile from left to right, such that $\text{new card} \lt \text{top card of the pile}$.
+Idea: put the new card on the leftmost pile possible, i.e., the first pile from left to right, such that $\text{new card} \le \text{top card of the pile}$.
 
 If we play the game with this strategy, we will notice that top cards form an IS(increasing sequence). For example,
 
@@ -84,7 +88,7 @@ Assume $x \lt y$, so we don’t have an IS. We have two cases:
 
 2. $y$ comes after $x$
 
-   Since $x$ is put into the red pile, $x \gt y'$ or it’ll be in the blue pile by our greedy algorithm. $y$ is on top of $y'$, so $y \lt y'$. But we assumed $x \lt y$, so $x \lt y \lt y'$ which contradicts $x\gt y'$.
+   Since $x$ is put into the red pile, $x \gt y'$ or it’ll be in the blue pile by our greedy algorithm. $y$ is on top of $y'$, so $y \le y'$. But we assumed $x \lt y$, so $x \lt y \le y'$ which contradicts $x\gt y'$.
 
 With these two observations, we can go head and prove the duality.
 
