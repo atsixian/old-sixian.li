@@ -83,7 +83,7 @@ export default {
       backgroundColor: `background`
     },
     p: {
-      fontSize: [1, 2, 3],
+      fontSize: [1, 2, 2],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
@@ -91,7 +91,7 @@ export default {
     },
     ...headingStyles,
     Container: {
-      padding: [3, 4]
+      padding: [3, 4, 5]
     },
     blockquote: {
       borderLeftColor: `primary`,
@@ -104,7 +104,7 @@ export default {
       }
     },
     li: {
-      fontSize: [1, 2, 3],
+      fontSize: [1, 2, 2],
       color: `text`
     }
   },

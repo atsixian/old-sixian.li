@@ -3,7 +3,7 @@ import { jsx, useColorMode } from "theme-ui";
 import React from "react";
 import { Flex, Box } from "@theme-ui/components";
 import { Complex, fft, author } from "fourier-svg";
-import p5 from "p5"
+import p5 from "p5";
 
 let points = [];
 let bdbox = author.bdbox;
@@ -47,16 +47,25 @@ class Fourier extends React.Component {
     const w = window.innerWidth; // try to be responsive
     this.setState({
       width: w > 1400 ? w * 0.5 : w * 0.7,
-      height: window.innerHeight / 2.7
+      height: window.innerHeight / 2.7,
     });
   };
 
-  Sketch = p5 => {
+  Sketch = (p5) => {
     let time = 0;
     let path = [];
     let maxRadius = 0;
 
-    function epicycles(p5, x, y, rotation, fourier, offset, scale, circleNumber) {
+    function epicycles(
+      p5,
+      x,
+      y,
+      rotation,
+      fourier,
+      offset,
+      scale,
+      circleNumber
+    ) {
       let lastx;
       let lasty;
       for (let k = 0; k < fourier.length; k++) {
@@ -110,9 +119,9 @@ class Fourier extends React.Component {
 
       // Don't recalculate points
       if (points.length === 0) {
-        points = author.points.map(element => ({
+        points = author.points.map((element) => ({
           x: element.x / scale,
-          y: element.y / scale
+          y: element.y / scale,
         }));
 
         const skip = 5;
@@ -143,7 +152,7 @@ class Fourier extends React.Component {
       );
 
       const v = epicycles(p5, o1.x, o1.y, p5.PI, fourier, 0.2, 0.8, 6);
- 
+
       path.unshift(v);
 
       p5.beginShape();
@@ -170,9 +179,9 @@ class Fourier extends React.Component {
         (bdbox.height / p5.height) * 1.5
       );
       // recalculate when resizing happends
-      points = author.points.map(element => ({
+      points = author.points.map((element) => ({
         x: element.x / scale,
-        y: element.y / scale
+        y: element.y / scale,
       }));
       p5.setup();
       p5.draw();

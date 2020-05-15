@@ -1,3 +1,5 @@
+// Taken from https://nehalist.io/adding-commento-to-react-apps-like-gatsby/
+
 import React, { useEffect } from "react";
 
 // Helper to add scripts to our page
