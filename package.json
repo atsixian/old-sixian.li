@@ -1,13 +1,15 @@
 {
-  "private": true,
-  "name": "minimal-blog",
-  "description": "Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.",
-  "version": "0.1.4",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "name": "sixian-li",
+  "description": "Minimal blog enhanced",
+  "version": "2.0.0",
+  "author": "Sixian <lisixian579@gmail.com>",
   "license": "MIT",
   "starter-name": "gatsby-starter-minimal-blog",
+  "files": [
+    "./public"
+  ],
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
@@ -31,7 +33,6 @@
     "gatsby-remark-images-medium-zoom": "^1.4.0",
     "gatsby-remark-katex": "^3.1.20",
     "gatsby-remark-smartypants": "^2.1.20",
-    "gatsby-source-ghost": "^4.0.3",
     "gatsby-transformer-remark": "^2.6.45",
     "katex": "^0.11.1",
     "p5": "^1.0.0",
