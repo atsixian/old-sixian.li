@@ -1,7 +1,7 @@
 {
-  "name": "sixian-li",
+  "name": "lisixian",
   "description": "Minimal blog enhanced",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "author": "Sixian <lisixian579@gmail.com>",
   "license": "MIT",
   "starter-name": "gatsby-starter-minimal-blog",
@@ -11,6 +11,7 @@
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
+    "deploy": "node ./deploy.js",
     "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",

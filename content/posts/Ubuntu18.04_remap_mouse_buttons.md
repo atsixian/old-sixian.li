@@ -14,7 +14,7 @@ excerpt: Remap buttons on a *wireless* mouse
 
 This is my mouse:
 
-![Expert MouseÂ® Wireless Trackball](https://media.accobrands.com/media/560-560/368565.jpg?width=680px&height=449px)
+![mouse](https://cdn.jsdelivr.net/gh/Deerhound579/image-hosting/img/mouse.jpg)
 
 The default right-click is the bottom right button, but I would like to use the top right button instead.
 

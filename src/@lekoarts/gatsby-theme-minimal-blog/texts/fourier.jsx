@@ -19,6 +19,17 @@ function withHook(Component) {
   };
 }
 
+// try to be responsive
+const adjustWidth = (width) => {
+  let scale = 0.7;
+  if (width > 1800) {
+    scale = 0.4;
+  } else if (width > 1400) {
+    scale = 0.5;
+  }
+  return width * scale;
+};
+
 class Fourier extends React.Component {
   constructor(props) {
     super(props);
@@ -44,9 +55,9 @@ class Fourier extends React.Component {
   }
 
   updateWindowDimensions = () => {
-    const w = window.innerWidth; // try to be responsive
+    const w = window.innerWidth;
     this.setState({
-      width: w > 1400 ? w * 0.5 : w * 0.7,
+      width: adjustWidth(w),
       height: window.innerHeight / 2.7,
     });
   };

@@ -2,7 +2,10 @@ require(`dotenv`).config({
   path: `.env`,
 });
 
+const version = process.env.GATSBY_BUILD_VERSION;
+
 module.exports = {
+  assetPrefix: `https://cdn.jsdelivr.net/npm/lisixian@${version}/public`,
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `Sixian Li`,
@@ -51,7 +54,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
-              quality: 90,
+              quality: 70,
               linkImagesToOriginal: false,
             },
           },
@@ -69,7 +72,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
-              quality: 90,
+              quality: 70,
               linkImagesToOriginal: false,
             },
           },
