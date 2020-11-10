@@ -24,7 +24,9 @@ const exec = promisify(require("child_process").exec);
     });
     console.log(build.stdout);
     console.error(build.stderr);
-    const publish = await exec(`yarn publish --new-version ${newVersion}`);
+    const publish = await exec(
+      `git config --global user.email lisixian579@gmail.com; git config --global user.name "Sixian"; yarn publish --new-version ${newVersion}`
+    );
     console.log(publish.stdout);
     console.error(publish.stderr);
   } catch (error) {
