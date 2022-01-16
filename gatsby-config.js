@@ -5,7 +5,6 @@ require(`dotenv`).config({
 const version = process.env.GATSBY_BUILD_VERSION;
 
 module.exports = {
-  assetPrefix: `https://cdn.jsdelivr.net/npm/lisixian@${version}/public`,
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `Sixian Li`,
