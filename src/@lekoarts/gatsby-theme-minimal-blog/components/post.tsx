@@ -5,6 +5,7 @@ import React from "react";
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout";
 import ItemTags from "@lekoarts/gatsby-theme-minimal-blog/src/components/item-tags";
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo";
+import { Helmet } from "react-helmet";
 
 type PostProps = {
   data: {
@@ -35,6 +36,10 @@ const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`);
 
 const Post = ({ data: { post } }: PostProps) => (
   <Layout>
+    <Helmet>
+    {/* <script src="http://include.com/pathtojs.js" type="text/javascript" /> */}
+    <script defer src="https://chirpy.dev/bootstrap/comment.js" data-chirpy-domain="sixian.li"></script>
+    </Helmet>
     <SEO
       title={post.title}
       description={post.description ? post.description : post.excerpt}
@@ -67,6 +72,7 @@ const Post = ({ data: { post } }: PostProps) => (
       }}
     >
       <MDXRenderer>{post.body}</MDXRenderer>
+      <div data-chirpy-comment="true"></div>
     </section>
   </Layout>
 );
