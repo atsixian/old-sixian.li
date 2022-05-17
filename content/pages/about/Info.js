@@ -27,7 +27,7 @@ export default () => {
       />
       <Box sx={{ mx: "auto", px: 3, py: [5, 1, 1] }}>
         <Text sx={{ fontFamily: "body", fontSize: [1, 2, 3] }}>
-          I'm studying CS and Math at McGill University.
+          I studied CS and Math at McGill University, and now I'm working at Microsoft.
           <br />
           I've been programming for {new Date().getFullYear() - 2018} years,
           long enough to know my way around the keyboard, too short a time to be
