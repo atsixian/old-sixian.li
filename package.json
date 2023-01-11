@@ -33,7 +33,7 @@
     "gatsby-remark-images-medium-zoom": "^1.4.0",
     "gatsby-remark-katex": "^3.1.20",
     "gatsby-remark-smartypants": "^2.1.20",
-    "gatsby-transformer-remark": "^2.6.45",
+    "gatsby-transformer-remark": "^5.25.1",
     "katex": "^0.11.1",
     "p5": "^1.0.0",
     "react": "^16.9.0",
