@@ -23,13 +23,17 @@ module.exports = {
     // Links displayed in the header on the right side
     externalLinks: [
       {
-        name: `Github`,
+        name: `GitHub`,
         url: `https://github.com/Deerhound579`,
       },
       {
-        name: `Linkedin`,
+        name: `LinkedIn`,
         url: `https://www.linkedin.com/in/lisixian/`,
       },
+      {
+        name: `Unsplash`,
+        url: `https://unsplash.com/@sixian`,
+      }
     ],
     // Navigation links
     navigation: [
