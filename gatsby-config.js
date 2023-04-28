@@ -27,8 +27,9 @@ module.exports = {
         url: `https://github.com/Deerhound579`,
       },
       {
-        name: `LinkedIn`,
-        url: `https://www.linkedin.com/in/lisixian/`,
+        name: `Twitter`,
+        url: `https://twitter.com/noworkforsixian`,
+
       },
       {
         name: `Unsplash`,
